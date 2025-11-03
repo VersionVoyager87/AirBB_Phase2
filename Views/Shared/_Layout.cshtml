@@ -1,5 +1,4 @@
 ﻿@using AirBB.Models
-
 @{
     var session = new AirBBSession(Context.Session);
     var context = ViewData["Context"] as AirBBContext;
@@ -13,13 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - AirBB</title>
 
+    <!-- ✅ All external links use HTTPS -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="~/lib/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
 <body>
-    @* ✅ Global TempData alert with FontAwesome *@
     @if (TempData["message"] != null)
     {
         <div class="alert alert-success text-center mb-0 shadow-sm">
